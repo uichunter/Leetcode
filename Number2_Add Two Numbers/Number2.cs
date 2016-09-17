@@ -23,7 +23,7 @@ namespace Leetcode
 
         public ListNode AddTwoNumbers(ListNode l1, ListNode l2)
         {
-            bool isAdd1 = false;
+            bool isAdd1 = false; //A tag used to specify sum of two digits is more than 10 or not.
             int temp = 0;
             ListNode firstNode = new ListNode(0);
             ListNode Head = firstNode;
@@ -49,7 +49,6 @@ namespace Leetcode
                 firstNode.next = new ListNode(temp % 10);
                 firstNode = firstNode.next;
             }
-
             firstNode.next = new ListNode(temp % 10);
 
             return Head.next;
